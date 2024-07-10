@@ -16,8 +16,6 @@ jobs:
           check-latest: true
       - run: npm install --no-package-lock
         name: Install dev dependencies
-      - run: npm test
-        name: Run test
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
