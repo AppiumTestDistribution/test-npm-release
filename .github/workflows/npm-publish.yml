@@ -1,45 +1,25 @@
-name: Release Device Farm to NPM
+name: Release
+
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
-    tags:
-      - '*.*.*'
-  pull_request:
-    types:
-      - labeled
+    branches: [ master ]
 
 jobs:
-  release:
-    if: github.event.action != 'labeled'
-    runs-on: ubuntu-latest
+  build:
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      # Get tag name.
-      - id: tag
-        uses: haya14busa/action-cond@v1
-        with:
-          cond: "${{ startsWith(github.ref, 'refs/tags/') }}"
-
-      - name: Release
-        uses: justincy/github-action-npm-release@2.0.2
-        id: release
       - uses: actions/setup-node@v3
-        if: steps.release.outputs.released == 'true'
         with:
-          registry-url: 'https://registry.npmjs.org'
-          node-version: 16
-      - name: Publish
-        if: steps.release.outputs.released == 'true'
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.npm_token}}" > .npmrc && npm ci && npm publish
+          node-version: lts/*
+          check-latest: true
+      - run: npm install --no-package-lock
+        name: Install dev dependencies
+      - run: npm run test
+        name: Run test
+      - run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-
-
-  release-check:
-    if: github.event.action == 'labeled'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Post bumpr status comment
-        uses: haya14busa/action-bumpr@v1
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.npm_token }}
+        name: Release
