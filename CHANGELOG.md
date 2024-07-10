@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.4...v1.0.5) (2024-07-10)
+
+### Miscellaneous Chores
+
+* Should not release ([714c0c2](https://github.com/AppiumTestDistribution/test-npm-release/commit/714c0c27aabaa9ff5ac7dbfc78652e5b94f7e8f9))
+
 ## [1.0.4](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.3...v1.0.4) (2024-07-10)
 
 ### Bug Fixes
