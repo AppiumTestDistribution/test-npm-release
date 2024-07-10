@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.3...v1.0.4) (2024-07-10)
+
+### Bug Fixes
+
+* **ios:** make a release ([ef0c1dc](https://github.com/AppiumTestDistribution/test-npm-release/commit/ef0c1dc7fea271437010ba4bf711d98837d6e6b3))
+
 ## [1.0.3](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.2...v1.0.3) (2024-07-10)
 
 ### Miscellaneous Chores
