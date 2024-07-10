@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.2...v1.0.3) (2024-07-10)
+
+### Miscellaneous Chores
+
+* just to check pr title ([a563b71](https://github.com/AppiumTestDistribution/test-npm-release/commit/a563b7123b15beaf73b679eb287a5fed7ab8b973))
+
 ## [1.0.2](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.1...v1.0.2) (2024-07-10)
 
 ### Miscellaneous Chores
