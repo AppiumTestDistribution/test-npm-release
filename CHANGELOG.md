@@ -1,3 +1,13 @@
+## [1.0.2](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.1...v1.0.2) (2024-07-10)
+
+### Miscellaneous Chores
+
+* added pr title to verify ([a1a06c7](https://github.com/AppiumTestDistribution/test-npm-release/commit/a1a06c7a680ee73c8d4e124e46802c777dbdbdc7))
+
+### Code Refactoring
+
+* no release to be made ([b506fd1](https://github.com/AppiumTestDistribution/test-npm-release/commit/b506fd12fea1001ff0c0f2d3e7a682d3f3552a35))
+
 ## [1.0.1](https://github.com/AppiumTestDistribution/test-npm-release/compare/v1.0.0...v1.0.1) (2024-07-10)
 
 ### Bug Fixes
